@@ -1,8 +1,8 @@
 let baseUrl = '';
 if (process.env.NODE_ENV == 'development') {
-	baseUrl = '';
+	baseUrl = 'api/';
 } else if (process.env.NODE_ENV == 'production') {
-	baseUrl = 'http://apps.xiletongcheng.com:8089/qiganshop';
+	baseUrl = 'http://api.yananie.com/';
 }
 export {
 	baseUrl
