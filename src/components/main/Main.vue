@@ -32,8 +32,8 @@
 								<Icon type="ios-navigate"></Icon>
 								Excel
 							</template>
-							<MenuItem name="1-1" :to="{name:'home'}">读取excel</MenuItem>
-							<MenuItem name="1-2" :to="{name:'home_splicing'}">拼接列Excel</MenuItem>
+							<MenuItem name="1-1" :to="{name:'excel_index'}">读取excel</MenuItem>
+							<MenuItem name="1-2" :to="{name:'excel_splicing'}">拼接列Excel</MenuItem>
 							<MenuItem name="1-3">Option 3</MenuItem>
 						</Submenu>
 						<Submenu name="2">

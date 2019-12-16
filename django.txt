@@ -1,0 +1,164 @@
+-novid -tickrate 128 -freq 144 -preload -nojoy
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/yanan0530/yannaie.git
+git push -u origin master
+git remote rm origin
+git remote add origin https://github.com/yanan0530/yananie.git
+git push -u origin master
+
+git  设置用户名
+git config --global user.name 'yanan0530'
+
+设置邮箱
+
+git config --global user.email '550985993@qq.com'
+
+//查看信息
+cat .git/config
+
+ 初始化
+git init
+
+
+查看 状态 
+
+git status
+
+
+git add 文件名  添加到暂存区
+
+git commit -m "描述" 提交添加到本地
+
+删除 文件
+
+
+删除之后 
+
+删除
+git rm 文件名
+
+先连接  git remote add origin https://github.com/yanan0530/2019.git
+
+
+
+
+
+
+git push origin master 在登录密码
+
+git remote add origin https://github.com/yanan0530/springboot.git
+
+git pull origin master  更新
+
+
+
+
+git remote add origin https://github.com/yanan0530/vueweb.git
+git push -u origin master
+//拉去
+git fetch https://github.com/yanan0530/yananie.git
+
+
+python manage.py makemigrations app
+
+python manage.py migrate
+
+python manage.py createsuperuser
+
+
+python manage.py startapp polls
+
+//django 静态打包 
+python manage.py collectstatic
+//端口占用
+sudo fuser -k 8000/tcp
+//过滤 启动项目
+ps -aux | grep 
+
+
+1、卸载python3.4
+sudo apt-get remove python3.4
+2、卸载python3.4及其依赖
+sudo apt-get remove --auto-remove python3.4
+3、清除python3.4
+sudo apt-get purge python3.4
+
+ssh root@115.28.129.103
+
+//重新更新 链接服务器
+ssh-keygen -R 115.28.129.103
+//更新所有包
+sudo apt update
+
+安装python3.7
+
+sudo apt-get install python3.7
+
+
+调整Python3的优先级，使得3.7优先级较高
+
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
+
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 2
+
+更改默认值，python默认为Python2，现在修改为Python3
+
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 100
+
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 150
+
+安装PIP3
+sudo apt-get install python3-pip
+//卸载pip
+sudo apt-get remove python3-pip
+
+//安装虚拟机 
+pip3 install virtualenv
+
+
+/usr/bin/python3.7
+
+sudo apt-get install nginx
+sudo apt-get install git
+
+
+建立虚拟环境 
+
+virtualenv yananie
+source yananie/bin/activate
+
+
+virtualenv -p /usr/bin/python3.7 django
+
+
+django pip
+
+pip install djangorestframework   https://www.django-rest-framework.org/#installation
+
+
+uwsgi --chdir /var/www/yananie --http :8000 --module yananie.wsgi:application
+启动
+uwsgi --ini /uwsgi/api/yananie.ini
+重启
+uwsgi --reload /uwsgi/api/yananiemaster.pid
+查看进程
+ps -aux | grep uwsgi
+
+关闭
+uwsgi --stop /uwsgi/api/yananiemaster.pid
+
+//重启 nginx 
+service nginx restart
+
+安装 
+pip install django-cors-headers
+
+
+
+生成requirements.txt文件
+pip freeze > requirements.txt
+安装requirements.txt依赖
+pip install -r requirements.txt
+

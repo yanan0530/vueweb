@@ -8,12 +8,10 @@
 				<Input v-model="form.character" placeholder="请填写拼接字符如:,"></Input>
 			</FormItem>
 		</Form>
-		<Upload action="/excelcms/splicingCell" :headers="headers" :data="form" :on-success="success">
+		<Upload :action="action" :headers="headers" :data="form" :on-success="success" :show-upload-list="false">
 			<Button icon="ios-cloud-upload-outline">上传Excel</Button>
 		</Upload>
-
-		<Input v-model="str" type="textarea" :rows="20" placeholder="" />
-
+		<Input style="margin-top: 10px;" v-model="str" type="textarea" :rows="20" placeholder="" />
 	</div>
 </template>
 
@@ -21,9 +19,11 @@
 	import {
 		getCsrfToken
 	} from '@/utils/cache.js'
+	import config from "@/config/index.js"
 	export default {
 		data() {
 			return {
+				action: config.baseUrl + "/excelcms/splicingCell",
 				headers: {
 					'X-CSRFTOKEN': '',
 				},
