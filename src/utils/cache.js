@@ -1,25 +1,25 @@
 // import storage from 'good-storage'
-// const TokenKey = 'Access-Token' //token
+const TokenKey = 'Access-Token' //token
 const UserInfoKey = 'User-Info' //用户信息 {} {...}
 const CsrfToken = 'csrftoken'
 import Cookies from "js-cookie"
-// export function loadToken() {
-// const token = Cookies.get(TokenKey)
-// 	if (token) return token
-// 	else return false
-// }
+export function loadToken() {
+const token = Cookies.get(TokenKey)
+	if (token) return token
+	else return ""
+}
 
-// export function saveToken(token) {
-// 	Cookies.set(TokenKey, token, {
-// 		expires: 1
-// 	})
-// 	return token
-// }
+export function saveToken(token) {
+	Cookies.set(TokenKey, token, {
+		expires: 1
+	})
+	return token
+}
 
-// export function removeToken() {
-// 	Cookies.remove(TokenKey);
-// 	return ""
-// }
+export function removeToken() {
+	Cookies.remove(TokenKey);
+	return ""
+}
 
 export function getUserInfo() {
 	const userInfo = Cookies.get(UserInfoKey)

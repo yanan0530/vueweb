@@ -1,14 +1,13 @@
 import axios from "axios"
 // import qs from 'qs'
-import {baseUrl} from "@/config"
-// console.info(baseUrl)
+// import * as comUrl from "@/config/index.js"
+// console.info(comUrl.baseUrl)
 axios.defaults.baseURL = 'http://127.0.0.1:8000'
 // axios.interceptors.request.use(function(config) {
 // 	return config;
 // }, function(error) {
 // 	return Promise.reject(error);
 // });
-
 export default function ajax(url, data = {}, type = "GET") {
 	return new Promise(function(resolve, reject) {
 		let promise
@@ -29,7 +28,7 @@ export default function ajax(url, data = {}, type = "GET") {
 				break;
 		}
 		promise.then(res => {
-			resolve(res.data)
+			resolve(res)
 		}).catch(error => {
 			reject(error)
 		})

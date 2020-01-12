@@ -1,5 +1,5 @@
 import {
-	// loadToken,
+	loadToken,
 	getUserInfo,
 	// loadUserPosition,
 	// loadSystem,
@@ -8,7 +8,7 @@ import {
 
 const state = {
 	// loginStatus: loadLoginStatus(), //登录状态
-	// token: loadToken(), //token
+	token: loadToken(), //token
 	userInfo: getUserInfo(), //用户登录信息
 	couponStatus:[],
 	category:[],

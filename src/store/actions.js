@@ -1,7 +1,7 @@
 import * as types from './mutationTypes'
 // import { loginByCode } from '../api/wechatAuth'
 import {
-	// saveToken,
+	saveToken,
 	saveUserInfo,
 } from '@/utils/cache'
 
@@ -12,11 +12,11 @@ export const setUserInfo = function({
 }, query) {
 	commit(types.SET_USERINFO, saveUserInfo(query))
 }
-// export const setToken = function({
-// 	commit
-// }, query) {
-// 	commit(types.SET_TOKEN, saveToken(query))
-// }
+export const setToken = function({
+	commit
+}, query) {
+	commit(types.SET_TOKEN, saveToken(query))
+}
 
 // export const setCouponStatus = function({
 // 	commit
