@@ -8,9 +8,6 @@
 <script>
 	import {
 		yqApi,
-		getLoginApi,
-		postLoginApi,
-		wxfApi
 	} from "@/api/home.js"
 	export default {
 		data() {

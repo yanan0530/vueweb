@@ -23,7 +23,7 @@
 	export default {
 		data() {
 			return {
-				action: config.baseUrl + "/excelcms/splicingCell",
+				action: config + "/excelcms/splicingCell",
 				headers: {
 					'X-CSRFTOKEN': '',
 				},

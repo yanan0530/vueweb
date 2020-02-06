@@ -4,11 +4,11 @@ module.exports = {
 	devServer: {
 		// port: 9000,
 		// proxy: {
-		// 	'/api': {
-		// 		target: 'http://127.0.0.1:8000',
+		// 	'/ug': {
+		// 		target: 'https://c.m.163.com',
 		// 		changeOrigin: true,
 		// 		pathRewrite: {
-		// 			'^/api': '/'
+		// 			'^/ug': '/'
 		// 		}
 		// 	},
 		// }

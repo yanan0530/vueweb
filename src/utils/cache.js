@@ -1,5 +1,5 @@
 // import storage from 'good-storage'
-const TokenKey = 'Access-Token' //token
+const TokenKey = 'token' //token
 const UserInfoKey = 'User-Info' //用户信息 {} {...}
 const CsrfToken = 'csrftoken'
 import Cookies from "js-cookie"
@@ -34,6 +34,7 @@ export function saveUserInfo(userInfo) {
 	})
 	return userInfo
 }
+
 
 // export function removeUserInfo() {
 // 	Cookies.remove(UserInfoKey);

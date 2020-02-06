@@ -16,7 +16,7 @@
 	export default {
 		data() {
 			return {
-				action: config.baseUrl + "/excelcms/fileExcel",
+				action: config + "/excelcms/fileExcel",
 				url: "",
 				columns: [],
 				data: [],

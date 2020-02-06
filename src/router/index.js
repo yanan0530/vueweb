@@ -6,9 +6,10 @@ const router = new Router({
 	mode: 'history',
 	routes
 })
-
 router.addRoutes([{
 	path: "/",
-	redirect: '/excel/splicing',
+	redirect: {
+		name: 'datas_map'
+	},
 }])
 export default router

@@ -1,9 +1,13 @@
 export default [{
 	path: "/index",
+	name: "index",
+	redirect: {
+		name: 'index_index'
+	},
 	component: () => import("@/components/main/index.js"),
 	children: [{
-		path: "",
-		name: "index",
+		path: "index",
+		name: "index_index",
 		component: () => import("@/views/home/index.vue"),
 		meta: {
 			title: "首页",
