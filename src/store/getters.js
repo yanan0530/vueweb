@@ -10,3 +10,5 @@ export const wareHouse = state => state.wareHouse
 
 //订单状态
 export const orderStatus = state => state.orderStatus
+
+export const tabs = state => state.tabs

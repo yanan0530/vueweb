@@ -7,18 +7,12 @@ const mutations = {
 	[types.SET_TOKEN](state, token) {
 		state.token = token
 	},
-	// [types.SET_COUPONSTATUS](state, status) {
-	// 	state.couponStatus = status
-	// },
-	// [types.CATEGORY](state, category) {
-	// 	state.category = category
-	// },
-	// [types.WAREHOUSE](state, query) {
-	// 	state.wareHouse = query
-	// },
-	// [types.ORDERSTATUS](state, query) {
-	// 	state.orderStatus = query
-	// },
+	[types.SET_TABS](state, data) {
+		state.tabs.push(data)
+	},
+	DEL_TABS(state, index) {
+		state.tabs.splice(index,1)
+	}
 }
 
 export default mutations

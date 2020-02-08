@@ -2,6 +2,8 @@ export const SET_USERINFO = 'SET_USERINFO'
 
 export const SET_TOKEN = 'SET_TOKEN'
 
+export const SET_TABS = 'SET_TABS'
+
 // export const SET_COUPONSTATUS = 'SET_COUPONSTATUS'
 
 // export const CATEGORY = 'CATEGORY'

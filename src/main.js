@@ -15,6 +15,9 @@ import 'view-design/dist/styles/iview.css';
 Vue.use(ViewUI);
 // Vue.prototype.$G2 = G2
 Vue.prototype.$echarts = echarts
+
+
+
 Vue.use(G2)
 new Vue({
 	router,

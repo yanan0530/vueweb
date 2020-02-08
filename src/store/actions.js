@@ -18,6 +18,18 @@ export const setToken = function({
 	commit(types.SET_TOKEN, saveToken(query))
 }
 
+export const setTabs = function({
+	commit,
+	state
+}, data) {
+	let a=state.tabs.filter(item=>item.name==data.name)
+	if(a.length==0){
+		commit(types.SET_TABS, data)
+	}
+}
+
+
+
 // export const setCouponStatus = function({
 // 	commit
 // }, query) {

@@ -1,6 +1,7 @@
 <template>
-	<el-menu :default-active="activeIndex" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" @select="handleSelect">
-		<el-menu-item :index="item.name" v-for="(item,index) in list" :key="index">
+	<el-menu :default-active="active" class="el-menu-vertical-demo" background-color="#f2f2f2" active-text-color="#fff"
+	 router>
+		<el-menu-item :index="item.name" v-for="(item,index) in list" :key="index" :route="{'name':item.name}" v-if="item.name.split('_')[0]==$route.name.split('_')[0]">
 			<i v-if="item.meta.icon" :class="item.meta.icon"></i>
 			<span slot="title">{{item.meta.title}}</span>
 		</el-menu-item>
@@ -8,45 +9,39 @@
 </template>
 
 <script>
+	import {
+		mapActions
+	} from 'vuex'
 	import routers from "@/router/routers.js"
 	export default {
-		watch: {
-			$route: {
-				handler: function(val) {
-					this.setMenu(val)
-				},
-				deep: true
-			}
-		},
 		data() {
 			return {
 				routers,
-				activeIndex: "",
-				list: []
 			}
 		},
-		mounted() {
-			this.setMenu(this.$route)
+		watch: {
+			'$route'(newValue) {
+				this.setTabs(newValue)
+			}
 		},
-		methods: {
-			handleOpen(key, keyPath) {
-				console.log(key, keyPath);
+		created() {
+			this.setTabs(this.$route)
+		},
+		computed: {
+			active() {
+				return this.$route.name
 			},
-			handleClose(key, keyPath) {
-				console.log(key, keyPath);
-			},
-			handleSelect(key) {
-				this.activeIndex = key
-				this.$router.push({
-					name: key
+			list() {
+				let arr = []
+				routers.forEach(item => {
+					arr = [...arr, ...item.children]
 				})
-			},
-			setMenu(router) {
-				this.activeIndex = router.name
-				let topMenuName = this.activeIndex.split("_")[0]
-				let topMenu = routers.find(item => item.name == topMenuName)
-				this.list = topMenu.children
+				return arr
 			}
+		},
+		mounted() {},
+		methods: {
+			...mapActions(['setTabs'])
 		}
 	}
 </script>
@@ -55,5 +50,10 @@
 	.el-menu {
 		height: calc(100vh - 101px);
 		overflow-y: auto;
+	}
+
+	.el-menu>>>.is-active {
+		font-weight: 700;
+		background-color: #438EB9 !important;
 	}
 </style>

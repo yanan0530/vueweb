@@ -1,5 +1,5 @@
 <template>
-	<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+	<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#438EB9" text-color="#FFF" active-text-color="#FFF">
 		<el-menu-item :index="item.name"  v-for="(item,index) in routers" :key="index">{{item.meta.title}}</el-menu-item>
 	</el-menu>
 </template>
@@ -10,7 +10,7 @@
 		data() {
 			return {
 				routers,
-				activeIndex: "1"
+				activeIndex: "index"
 			}
 		},
 		mounted() {

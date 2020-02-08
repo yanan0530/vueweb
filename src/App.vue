@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<router-view></router-view>
-		<el-dialog title="收货地址" :visible.sync="loginShow">
+		<el-dialog title="登录" :visible.sync="loginShow">
 			<el-form :model="formInline" label-width="100">
 				<el-form-item label="账号">
 					<el-input v-model="formInline.username" autocomplete="off"></el-input>
