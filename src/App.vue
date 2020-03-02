@@ -85,4 +85,9 @@
 	.el-table thead th{
 		background: #f5f7fa;
 	}
+	.btns {
+		margin: 12px 0;
+		display: flex;
+		justify-content: space-between;
+	}
 </style>

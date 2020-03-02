@@ -48,7 +48,7 @@
 
 <style scoped="scoped">
 	.el-menu {
-		height: calc(100vh - 101px);
+		height: calc(100vh - 102px);
 		overflow-y: auto;
 	}
 

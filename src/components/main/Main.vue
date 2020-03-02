@@ -1,7 +1,7 @@
 <template>
 	<el-container>
 		<el-aside width="200px">
-			<xAvater style="height: 101px; background-color: #e6e6e6;"></xAvater>
+			<xAvater style="height: 99px;background-color: #f2f2f2;"></xAvater>
 			<left-main ref="leftmain"></left-main>
 		</el-aside>
 		<el-container>
@@ -43,7 +43,7 @@
 		},
 		methods: {
 			...mapMutations(['DEL_TABS']),
-			handleClick(tab, event) {
+			handleClick(tab) {
 				this.$router.push({
 					name: tab.name
 				})
@@ -52,11 +52,13 @@
 				this.tabs.forEach((item, index) => {
 					if (item.name == targetName) {
 						this.DEL_TABS(index)
-						if(targetName==this.activeName){
-							let name=this.tabs[index-1].name
-							this.$router.push({name})
+						if (targetName == this.activeName) {
+							let name = this.tabs[index - 1].name
+							this.$router.push({
+								name
+							})
 						}
-						
+
 					}
 				})
 			}
@@ -73,7 +75,8 @@
 	}
 
 	.el-main {
-		height: calc(100vh - 101px);
+		height: calc(100vh - 102px);
+		/* background-color: rgb(240, 242, 245); */
 	}
 
 	.daohang {
@@ -83,4 +86,13 @@
 	.el-tabs>>>.el-tabs__content {
 		padding: 0px !important;
 	}
+
+	.el-aside {
+		box-shadow: 2px 0 6px rgba(0, 21, 41, 0.15);
+	}
+
+	/* .el-card{
+		min-height: calc(100vh - 144px);
+		background-color: #f2f2f2;
+	} */
 </style>

@@ -7,3 +7,4 @@ export const goodsAddApi=(goods,type="POST")=>ajax(`/oper/userfavs/`,{goods},typ
 export const goodsDelFavApi=(goodsId,type="delete")=>ajax(`/oper/userfavs/${goodsId}/`,{},type)
 
 export const listGoodsBannerApi=()=>ajax("/goods/banners/")
+

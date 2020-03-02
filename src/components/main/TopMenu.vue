@@ -7,6 +7,11 @@
 <script>
 	import routers  from "@/router/routers.js"
 	export default {
+		watch: {
+			'$route'(newValue) {
+				this.activeIndex=newValue.name.split("_")[0]
+			}
+		},
 		data() {
 			return {
 				routers,
@@ -28,7 +33,6 @@
 <style scoped="scoped">
 	.el-menu-demo{
 		display: flex;
-		/* flex-direction: row-reverse; */
 		justify-content:flex-end
 	}
 </style>

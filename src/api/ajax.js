@@ -1,8 +1,8 @@
 import axios from "axios"
 // import qs from 'qs'
 import baseUrl from "@/config/index.js"
-import store  from "@/store/index.js"
-axios.defaults.headers.common['Authorization'] = `JWT `+store.getters.token;
+import store from "@/store/index.js"
+axios.defaults.headers.common['Authorization'] = `JWT ` + store.getters.token;
 axios.defaults.baseURL = baseUrl
 axios.interceptors.request.use(function(config) {
 	return config;
@@ -24,14 +24,14 @@ export default function ajax(url, data = {}, type = "GET") {
 				}
 				promise = axios.get(url)
 				break;
-			case "delete":
-				promise=axios.delete(url,data)
-				break
-			case "put":
-				promise=axios.put(url,data)
+			case "DELETE":
+				promise = axios.delete(url, data)
+				break	
+			case "PUT":
+				promise = axios.put(url, data)
 				break;
-			case "patch":
-				promise=axios.patch(url,data)
+			case "PATCH":
+				promise = axios.patch(url, data)
 				break;
 			default:
 				promise = axios.post(url, data)

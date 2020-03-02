@@ -12,3 +12,4 @@ export const wareHouse = state => state.wareHouse
 export const orderStatus = state => state.orderStatus
 
 export const tabs = state => state.tabs
+

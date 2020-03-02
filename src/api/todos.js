@@ -5,4 +5,4 @@ export const addTodosTodayApi=(data)=>ajax("/tools/todos/",data,"POST")
 export const updateTodosTodayApi=(data)=>ajax(`/tools/todos/${data.id}/`,data,"patch")
 export const delTodosTodyApi=(id)=>ajax(`/tools/todos/${id}/`,{},"delete")
 
-export const todosListAllApi=()=>ajax("/tools/all/")
+export const todosListAllApi=(data)=>ajax("/tools/all/",data)
