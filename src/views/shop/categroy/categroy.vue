@@ -117,7 +117,7 @@
 				console.info(this.saveForm.id)
 				// this.categoryAdd(this.saveForm)
 				let apiF
-				if(!!this.saveForm.id){
+				if(this.saveForm.id){
 					apiF=categoryEditApi(this.saveForm)
 				}else{
 					apiF=categoryAddApi(this.saveForm)

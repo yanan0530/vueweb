@@ -53,7 +53,7 @@ export function dateFormat(date) {
 	return ''
 }
 export function dateObj(date = null) {
-	if (!!date) {
+	if (date) {
 		data = new Date(date)
 	} else {
 		date = new Date()
@@ -104,7 +104,7 @@ function getWeekFromDate(date) {
 }
 //根据时间 获取月的
 export function dateMonth(date = "") {
-	if (!!date) {
+	if (date) {
 		date = new Date(date)
 	} else {
 		date = new Date()
@@ -122,7 +122,7 @@ export function dateMonth(date = "") {
 	}
 }
 export function dateWeek(date = "") {
-	if (!!date) {
+	if (date) {
 		date = new Date(date)
 	} else {
 		date = new Date()
@@ -165,7 +165,7 @@ export function dateWeek(date = "") {
 }
 //获取日期
 export function dateDay(date){
-	if (!!date) {
+	if (date) {
 		date = new Date(date)
 	} else {
 		date = new Date()

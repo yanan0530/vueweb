@@ -1,8 +1,8 @@
 <template>
 	<div class="pagination">
 		<el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="page.page"
-		 background :page-sizes="[10, 20, 30, 40]" :page-size="page.size" layout="total, sizes, prev, pager, next, jumper"
-		 :total="page.total">
+		background :page-sizes="[10, 20, 30, 40]" :page-size="page.size" layout="total, sizes, prev, pager, next, jumper"
+		:total="page.total">
 		</el-pagination>
 	</div>
 </template>

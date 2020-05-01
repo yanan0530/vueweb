@@ -8,56 +8,56 @@ git remote rm origin
 git remote add origin https://github.com/yanan0530/yananie.git
 git push -u origin master
 
-git  ÉèÖÃÓÃ»§Ãû
+git  ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½
 git config --global user.name 'yanan0530'
 
-ÉèÖÃÓÊÏä
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 git config --global user.email '550985993@qq.com'
 
-//²é¿´ĞÅÏ¢
+//ï¿½é¿´ï¿½ï¿½Ï¢
 cat .git/config
 
- ³õÊ¼»¯
+ ï¿½ï¿½Ê¼ï¿½ï¿½
 git init
 
 
-²é¿´ ×´Ì¬ 
+ï¿½é¿´ ×´Ì¬ 
 
 git status
 
 
-git add ÎÄ¼şÃû  Ìí¼Óµ½Ôİ´æÇø
+git add ï¿½Ä¼ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½Óµï¿½ï¿½İ´ï¿½ï¿½ï¿½
 
-git commit -m "ÃèÊö" Ìá½»Ìí¼Óµ½±¾µØ
+git commit -m "ï¿½ï¿½ï¿½ï¿½" ï¿½á½»ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½
 
-É¾³ı ÎÄ¼ş
-
-
-É¾³ıÖ®ºó 
-
-É¾³ı
-git rm ÎÄ¼şÃû
-
-ÏÈÁ¬½Ó  git remote add origin https://github.com/yanan0530/2019.git
+É¾ï¿½ï¿½ ï¿½Ä¼ï¿½
 
 
+É¾ï¿½ï¿½Ö®ï¿½ï¿½ 
+
+É¾ï¿½ï¿½
+git rm ï¿½Ä¼ï¿½ï¿½ï¿½
+
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  git remote add origin https://github.com/yanan0530/2019.git
 
 
 
 
-git push origin master ÔÚµÇÂ¼ÃÜÂë
+
+
+git push origin master ï¿½Úµï¿½Â¼ï¿½ï¿½ï¿½ï¿½
 
 git remote add origin https://github.com/yanan0530/springboot.git
 
-git pull origin master  ¸üĞÂ
+git pull origin master  ï¿½ï¿½ï¿½ï¿½
 
 
 
 
 git remote add origin https://github.com/yanan0530/vueweb.git
 git push -u origin master
-//À­È¥
+//ï¿½ï¿½È¥
 git fetch https://github.com/yanan0530/yananie.git
 
 
@@ -70,51 +70,51 @@ python manage.py createsuperuser
 
 python manage.py startapp polls
 
-//django ¾²Ì¬´ò°ü 
+//django ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ 
 python manage.py collectstatic
-//¶Ë¿ÚÕ¼ÓÃ
+//ï¿½Ë¿ï¿½Õ¼ï¿½ï¿½
 sudo fuser -k 8000/tcp
-//¹ıÂË Æô¶¯ÏîÄ¿
+//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
 ps -aux | grep 
 
 
-1¡¢Ğ¶ÔØpython3.4
+1ï¿½ï¿½Ğ¶ï¿½ï¿½python3.4
 sudo apt-get remove python3.4
-2¡¢Ğ¶ÔØpython3.4¼°ÆäÒÀÀµ
+2ï¿½ï¿½Ğ¶ï¿½ï¿½python3.4ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 sudo apt-get remove --auto-remove python3.4
-3¡¢Çå³ıpython3.4
+3ï¿½ï¿½ï¿½ï¿½ï¿½python3.4
 sudo apt-get purge python3.4
 
 ssh root@115.28.129.103
 
-//ÖØĞÂ¸üĞÂ Á´½Ó·şÎñÆ÷
+//ï¿½ï¿½ï¿½Â¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ï¿½
 ssh-keygen -R 115.28.129.103
-//¸üĞÂËùÓĞ°ü
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ°ï¿½
 sudo apt update
 
-°²×°python3.7
+ï¿½ï¿½×°python3.7
 
 sudo apt-get install python3.7
 
 
-µ÷ÕûPython3µÄÓÅÏÈ¼¶£¬Ê¹µÃ3.7ÓÅÏÈ¼¶½Ï¸ß
+ï¿½ï¿½ï¿½ï¿½Python3ï¿½ï¿½ï¿½ï¿½ï¿½È¼ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½3.7ï¿½ï¿½ï¿½È¼ï¿½ï¿½Ï¸ï¿½
 
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
 
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 2
 
-¸ü¸ÄÄ¬ÈÏÖµ£¬pythonÄ¬ÈÏÎªPython2£¬ÏÖÔÚĞŞ¸ÄÎªPython3
+ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½Öµï¿½ï¿½pythonÄ¬ï¿½ï¿½ÎªPython2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ş¸ï¿½ÎªPython3
 
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 100
 
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 150
 
-°²×°PIP3
+ï¿½ï¿½×°PIP3
 sudo apt-get install python3-pip
-//Ğ¶ÔØpip
+//Ğ¶ï¿½ï¿½pip
 sudo apt-get remove python3-pip
 
-//°²×°ĞéÄâ»ú 
+//ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ 
 pip3 install virtualenv
 
 
@@ -124,7 +124,7 @@ sudo apt-get install nginx
 sudo apt-get install git
 
 
-½¨Á¢ĞéÄâ»·¾³ 
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â»·ï¿½ï¿½ 
 
 virtualenv yananie
 source yananie/bin/activate
@@ -139,26 +139,26 @@ pip install djangorestframework   https://www.django-rest-framework.org/#install
 
 
 uwsgi --chdir /var/www/yananie --http :8000 --module yananie.wsgi:application
-Æô¶¯
+ï¿½ï¿½ï¿½ï¿½
 uwsgi --ini /uwsgi/api/yananie.ini
-ÖØÆô
+ï¿½ï¿½ï¿½ï¿½
 uwsgi --reload /uwsgi/api/yananiemaster.pid
-²é¿´½ø³Ì
+ï¿½é¿´ï¿½ï¿½ï¿½ï¿½
 ps -aux | grep uwsgi
 
-¹Ø±Õ
+ï¿½Ø±ï¿½
 uwsgi --stop /uwsgi/api/yananiemaster.pid
 
-//ÖØÆô nginx 
+//ï¿½ï¿½ï¿½ï¿½ nginx 
 service nginx restart
 
-°²×° 
+ï¿½ï¿½×° 
 pip install django-cors-headers
 
 
 
-Éú³Érequirements.txtÎÄ¼ş
+ï¿½ï¿½ï¿½ï¿½requirements.txtï¿½Ä¼ï¿½
 pip freeze > requirements.txt
-°²×°requirements.txtÒÀÀµ
+ï¿½ï¿½×°requirements.txtï¿½ï¿½ï¿½ï¿½
 pip install -r requirements.txt
 

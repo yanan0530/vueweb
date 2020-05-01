@@ -16,8 +16,14 @@ const router = new Router({
 router.addRoutes([{
 	path: "/",
 	redirect: {
-		name: 'shop_banner'
+		name: 'vegetables_vegetables'
 	},
+}, {
+	path: "/login",
+	name: "login",
+	component: () => import("@/views/login/login.vue"),
 }])
+
+
 
 export default router

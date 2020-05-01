@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<Form :model="info" :label-width="100">
+		1
+		<!-- <Form :model="info" :label-width="100">
 			<FormItem label="username">
 				<Input v-model="info.username" placeholder="Enter something..."></Input>
 			</FormItem>
@@ -23,7 +24,7 @@
 				<Button type="primary" @click="updateUser">确认修改</Button>
 				<Button style="margin-left: 8px">Cancel</Button>
 			</FormItem>
-		</Form>
+		</Form> -->
 	</div>
 </template>
 

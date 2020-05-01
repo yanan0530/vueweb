@@ -21,3 +21,10 @@ export const imagesListApi = (data) => ajax("/goods/images/", data)
 export const imagesAddApi = (data) => ajax("/goods/images/", data, "POST")
 export const imagesEditApi = (data) => ajax(`/goods/images/${data.id}/`, data, "PATCH")
 export const imagesDelApi = (id) => ajax(`/goods/images/${id}/`, {}, "DELETE")
+
+
+export const orderListApi = (data) => ajax("/trade/pc/orders/", data)
+export const orderAddApi = (data) => ajax("/trade/pc/orders/", data, "POST")
+export const orderEditApi = (data) => ajax(`/trade/pc/orders/${data.id}/`, data, "PATCH")
+export const orderDelApi = (id) => ajax(`/trade/pc/orders/${id}/`, {}, "DELETE")
+

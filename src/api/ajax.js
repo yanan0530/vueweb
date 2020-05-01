@@ -2,9 +2,10 @@ import axios from "axios"
 // import qs from 'qs'
 import baseUrl from "@/config/index.js"
 import store from "@/store/index.js"
-axios.defaults.headers.common['Authorization'] = `JWT ` + store.getters.token;
+// axios.defaults.headers.common['Authorization'] = `JWT ` + store.getters.token;
 axios.defaults.baseURL = baseUrl
 axios.interceptors.request.use(function(config) {
+	config.headers['Authorization']= `JWT ` + store.getters.token
 	return config;
 }, function(error) {
 	return Promise.reject(error);

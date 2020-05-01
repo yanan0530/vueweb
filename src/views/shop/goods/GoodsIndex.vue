@@ -38,31 +38,51 @@
 		</el-table>
 		<x-pag ref="page" :page="page" @changesize="changesize" @changepage="changepage"></x-pag>
 		<!-- 添加商品 -->
-		<el-dialog title="添加/编辑" :visible.sync="visi" :close-on-click-modal="false" width="500px">
+		<el-dialog title="添加/编辑" :visible.sync="visi" :close-on-click-modal="false" >
 			<el-form :model="saveForm" label-width="120px">
+				<el-row>
+					<el-col :md="8">
+						<el-form-item label="商品分类">
+							<el-cascader :options="categroy" filterable v-model="saveForm.category" :props="props" :show-all-levels="false" style="width: 100%;"></el-cascader>
+						</el-form-item>
+					</el-col>
+					<el-col :md="8">
+						<el-form-item label="商品编码">
+							<el-input v-model="saveForm.goods_sn"></el-input>
+						</el-form-item>
+					</el-col>
+					<el-col :md="8">
+						<el-form-item label="商品名称">
+							<el-input v-model="saveForm.name"></el-input>
+						</el-form-item>
+					</el-col>
+					<el-col :md="8">
+						<el-form-item label="商品描述">
+							<el-input v-model="saveForm.goods_brief"></el-input>
+						</el-form-item>
+					</el-col>
+					<el-col :md="8">
+						<el-form-item label="本店价格">
+							<el-input v-model.number="saveForm.shop_price"></el-input>
+						</el-form-item>
+					</el-col>
+					<el-col :md="8">
+						<el-form-item label="市场价格">
+							<el-input v-model.number="saveForm.market_price"></el-input>
+						</el-form-item>
+					</el-col>
+					<el-col :md="8">
+						<el-form-item label="库存数量">
+							<el-input v-model.number="saveForm.goods_num"></el-input>
+						</el-form-item>
+					</el-col>
+				</el-row>
 				<el-form-item label="封面图">
 					<x-upload ref="uploadImage" :imageUrl="saveForm.image_url"></x-upload>
 				</el-form-item>
-				<el-form-item label="商品分类">
-					<el-cascader :options="categroy" filterable v-model="saveForm.category" :props="props" :show-all-levels="false" style="width: 100%;"></el-cascader>
-				</el-form-item>
-				<el-form-item label="商品编码">
-					<el-input v-model="saveForm.goods_sn"></el-input>
-				</el-form-item>
-				<el-form-item label="商品名称">
-					<el-input v-model="saveForm.name"></el-input>
-				</el-form-item>
-				<el-form-item label="商品描述">
-					<el-input v-model="saveForm.goods_brief"></el-input>
-				</el-form-item>
-				<el-form-item label="本店价格">
-					<el-input v-model.number="saveForm.shop_price"></el-input>
-				</el-form-item>
-				<el-form-item label="市场价格">
-					<el-input v-model.number="saveForm.market_price"></el-input>
-				</el-form-item>
-				<el-form-item label="库存数量">
-					<el-input v-model.number="saveForm.goods_num"></el-input>
+				<el-form-item label="描述">
+					<!-- goods_brief -->
+					<x-editor ref="goods_des" :des="saveForm.goods_des"></x-editor>
 				</el-form-item>
 			</el-form>
 			<span slot="footer" class="dialog-footer">
@@ -90,9 +110,10 @@
 	import xUpload from "@/components/upload/upload.vue"
 	import xPag from "@/components/pagination/index.vue"
 	import UploadList  from "@/components/upload/UploadList.vue"
+	import xEditor from "@/components/editor/editor.vue"
 	export default {
 		components: {
-			xPag,xUpload,UploadList
+			xPag,xUpload,UploadList,xEditor
 		},
 		watch: {
 			visi(newValue) {
@@ -158,6 +179,7 @@
 			saveClick() {
 				let data=Object.assign({},this.saveForm)
 				data.image_url=this.$refs.uploadImage.image_url
+				data.goods_des=this.$refs.goods_des.contents
 				if(typeof(data.category) != "number"){
 					data.category=data.category.pop()
 				}

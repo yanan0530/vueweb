@@ -6,7 +6,7 @@
 			<el-table-column label="添加时间" prop="add_time"></el-table-column>
 			<el-table-column label="完成时间" prop="update"></el-table-column>
 		</el-table>
-		 <x-pag ref="page" :page="page" @changesize="changesize" @changepage="changepage"></x-pag>
+		<x-pag ref="page" :page="page" @changesize="changesize" @changepage="changepage"></x-pag>
 	</div>
 </template>
 

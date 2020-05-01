@@ -4,6 +4,6 @@ export const listShopCartApi=()=>ajax("/trade/shopcarts/")
 
 export const createShopCartApi=(data)=>ajax("/trade/shopcarts/",data,"POST")
 
-export const updateShopCartApi=(data)=>ajax(`/trade/shopcarts/${data.goods}/`,data,"put")
+export const updateShopCartApi=(data)=>ajax(`/trade/shopcarts/${data.goods}/`,data,"PUT")
 
-export const delShopCartApi=(id)=>ajax(`/trade/shopcarts/${id}/`,{},"delete")
+export const delShopCartApi=(id)=>ajax(`/trade/shopcarts/${id}/`,{},"DELETE")

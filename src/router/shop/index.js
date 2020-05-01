@@ -18,11 +18,18 @@ export default [{
 			title: "商品分类",
 		},
 	}, {
-		path: "detail",
+		path: "goods",
 		name: "shop_goods",
 		component: () => import("@/views/shop/goods/GoodsIndex.vue"),
 		meta: {
 			title: "商品管理",
+		},
+	},{
+		path: "order",
+		name: "shop_order",
+		component: () => import("@/views/shop/order/order.vue"),
+		meta: {
+			title: "订单管理",
 		},
 	}],
 	meta: {

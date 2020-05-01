@@ -1,6 +1,6 @@
 <template>
 	<el-upload class="upload-demo" :limit="1" :action="baseUrl+'/upload/image'" list-type="picture" :on-success="onSuccess"
-	 :file-list="fileList">
+	:file-list="fileList">
 		<el-button size="small" type="primary">点击上传</el-button>
 		<div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
 	</el-upload>
@@ -41,7 +41,7 @@
 						name: n.slice(-1)[0],
 						url: this.baseUrl + '/' + url
 					}]
-					this.image_url = n
+					this.image_url = url
 				}
 			}
 		}
